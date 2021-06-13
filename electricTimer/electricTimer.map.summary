@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 27 12:14:56 2019
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : electricTimer
+Top-level Entity Name : electricTimer
+Family : Cyclone II
+Total logic elements : 277
+    Total combinational functions : 277
+    Dedicated logic registers : 86
+Total registers : 86
+Total pins : 60
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

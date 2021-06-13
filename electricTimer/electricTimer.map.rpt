@@ -1,0 +1,351 @@
+Analysis & Synthesis report for electricTimer
+Mon May 27 12:14:56 2019
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 27 12:14:56 2019        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; electricTimer                                ;
+; Top-level Entity Name              ; electricTimer                                ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 277                                          ;
+;     Total combinational functions  ; 277                                          ;
+;     Dedicated logic registers      ; 86                                           ;
+; Total registers                    ; 86                                           ;
+; Total pins                         ; 60                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                        ; electricTimer      ; electricTimer      ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; fbcd7seg.vhd                     ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/fbcd7seg.vhd          ;
+; mode_sel.vhd                     ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/mode_sel.vhd          ;
+; mux21.vhd                        ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/mux21.vhd             ;
+; clk_1hz.vhd                      ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/clk_1hz.vhd           ;
+; counter24_hour.vhd               ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/counter24_hour.vhd    ;
+; counter60_min_sec.vhd            ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/counter60_min_sec.vhd ;
+; electricTimer.vhd                ; yes             ; User VHDL File  ; D:/Programming/VHDL/electricTimer/electricTimer.vhd     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 277                  ;
+;                                             ;                      ;
+; Total combinational functions               ; 277                  ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 119                  ;
+;     -- 3 input functions                    ; 67                   ;
+;     -- <=2 input functions                  ; 91                   ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 244                  ;
+;     -- arithmetic mode                      ; 33                   ;
+;                                             ;                      ;
+; Total registers                             ; 86                   ;
+;     -- Dedicated logic registers            ; 86                   ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 60                   ;
+; Maximum fan-out node                        ; clk_1hz:D1|LessThan1 ;
+; Maximum fan-out                             ; 80                   ;
+; Total fan-out                               ; 1168                 ;
+; Average fan-out                             ; 2.76                 ;
++---------------------------------------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |electricTimer             ; 277 (2)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 60   ; 0            ; |electricTimer                      ; work         ;
+;    |clk_1hz:D1|            ; 40 (40)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|clk_1hz:D1           ; work         ;
+;    |counter24_hour:D6|     ; 21 (21)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|counter24_hour:D6    ; work         ;
+;    |counter60_min_sec:D4|  ; 15 (15)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|counter60_min_sec:D4 ; work         ;
+;    |counter60_min_sec:D5|  ; 15 (15)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|counter60_min_sec:D5 ; work         ;
+;    |fbcd7seg:D10|          ; 36 (36)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D10         ; work         ;
+;    |fbcd7seg:D11|          ; 22 (22)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D11         ; work         ;
+;    |fbcd7seg:D12|          ; 35 (35)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D12         ; work         ;
+;    |fbcd7seg:D7|           ; 25 (25)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D7          ; work         ;
+;    |fbcd7seg:D8|           ; 36 (36)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D8          ; work         ;
+;    |fbcd7seg:D9|           ; 24 (24)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|fbcd7seg:D9          ; work         ;
+;    |mode_sel:D2|           ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|mode_sel:D2          ; work         ;
+;    |mux21:D3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |electricTimer|mux21:D3             ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++---------------------------------------+-------------------------------------------+
+; Register name                         ; Reason for Removal                        ;
++---------------------------------------+-------------------------------------------+
+; fbcd7seg:D11|dis[3]~_emulated         ; Merged with fbcd7seg:D11|dis[0]~_emulated ;
+; fbcd7seg:D9|dis[3]~_emulated          ; Merged with fbcd7seg:D9|dis[0]~_emulated  ;
+; fbcd7seg:D7|dis[3]~_emulated          ; Merged with fbcd7seg:D7|dis[0]~_emulated  ;
+; Total Number of Removed Registers = 3 ;                                           ;
++---------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 86    ;
+; Number of registers using Synchronous Clear  ; 25    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 39    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |electricTimer|counter60_min_sec:D5|countsec0[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |electricTimer|counter60_min_sec:D4|countsec0[0] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |electricTimer|counter24_hour:D6|countsec1[0]    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |electricTimer|counter24_hour:D6|countsec0[3]    ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |electricTimer|counter60_min_sec:D5|countsec1[2] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |electricTimer|counter60_min_sec:D4|countsec1[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon May 27 12:14:53 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off electricTimer -c electricTimer
+Info: Found 2 design units, including 1 entities, in source file fbcd7seg.vhd
+    Info: Found design unit 1: fbcd7seg-behavioral
+    Info: Found entity 1: fbcd7seg
+Info: Found 2 design units, including 1 entities, in source file mode_sel.vhd
+    Info: Found design unit 1: mode_sel-behavioral
+    Info: Found entity 1: mode_sel
+Info: Found 2 design units, including 1 entities, in source file mux21.vhd
+    Info: Found design unit 1: mux21-behavioral
+    Info: Found entity 1: mux21
+Info: Found 2 design units, including 1 entities, in source file clk_1hz.vhd
+    Info: Found design unit 1: clk_1hz-behavioral
+    Info: Found entity 1: clk_1hz
+Warning: Can't analyze file -- file D:/Programming/VHDL/electricTimer/module_select.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file counter24_hour.vhd
+    Info: Found design unit 1: counter24_hour-behavioral
+    Info: Found entity 1: counter24_hour
+Info: Found 2 design units, including 1 entities, in source file counter60_min_sec.vhd
+    Info: Found design unit 1: counter60_min_sec-behavioral
+    Info: Found entity 1: counter60_min_sec
+Warning: Can't analyze file -- file D:/Programming/VHDL/electricTimer/f7seg.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file electricTimer.vhd
+    Info: Found design unit 1: electricTimer-Structure
+    Info: Found entity 1: electricTimer
+Info: Elaborating entity "electricTimer" for the top level hierarchy
+Info: Elaborating entity "clk_1hz" for hierarchy "clk_1hz:D1"
+Info: Elaborating entity "mode_sel" for hierarchy "mode_sel:D2"
+Info: Elaborating entity "mux21" for hierarchy "mux21:D3"
+Info: Elaborating entity "counter60_min_sec" for hierarchy "counter60_min_sec:D4"
+Info: Elaborating entity "counter24_hour" for hierarchy "counter24_hour:D6"
+Info: Elaborating entity "fbcd7seg" for hierarchy "fbcd7seg:D7"
+Warning: Clock multiplexers are found and protected
+    Warning: Found clock multiplexer mux21:D3|Y
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "fbcd7seg:D11|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[0]~_emulated" and latch "fbcd7seg:D11|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[1]~_emulated" and latch "fbcd7seg:D11|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[2]~_emulated" and latch "fbcd7seg:D11|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[3]~_emulated" and latch "fbcd7seg:D11|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[4]~_emulated" and latch "fbcd7seg:D11|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[5]~_emulated" and latch "fbcd7seg:D11|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D11|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D11|dis[6]~_emulated" and latch "fbcd7seg:D11|dis[6]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[0]~_emulated" and latch "fbcd7seg:D12|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[1]~_emulated" and latch "fbcd7seg:D12|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[2]~_emulated" and latch "fbcd7seg:D12|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[3]~_emulated" and latch "fbcd7seg:D12|dis[3]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[4]~_emulated" and latch "fbcd7seg:D12|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[5]~_emulated" and latch "fbcd7seg:D12|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D12|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D12|dis[6]~_emulated" and latch "fbcd7seg:D12|dis[6]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[0]~_emulated" and latch "fbcd7seg:D9|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[1]~_emulated" and latch "fbcd7seg:D9|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[2]~_emulated" and latch "fbcd7seg:D9|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[3]~_emulated" and latch "fbcd7seg:D9|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[4]~_emulated" and latch "fbcd7seg:D9|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[5]~_emulated" and latch "fbcd7seg:D9|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D9|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D9|dis[6]~_emulated" and latch "fbcd7seg:D9|dis[6]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[0]~_emulated" and latch "fbcd7seg:D10|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[1]~_emulated" and latch "fbcd7seg:D10|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[2]~_emulated" and latch "fbcd7seg:D10|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[3]~_emulated" and latch "fbcd7seg:D10|dis[3]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[4]~_emulated" and latch "fbcd7seg:D10|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[5]~_emulated" and latch "fbcd7seg:D10|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D10|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D10|dis[6]~_emulated" and latch "fbcd7seg:D10|dis[6]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[0]~_emulated" and latch "fbcd7seg:D7|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[1]~_emulated" and latch "fbcd7seg:D7|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[2]~_emulated" and latch "fbcd7seg:D7|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[3]~_emulated" and latch "fbcd7seg:D7|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[4]~_emulated" and latch "fbcd7seg:D7|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[5]~_emulated" and latch "fbcd7seg:D7|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D7|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D7|dis[6]~_emulated" and latch "fbcd7seg:D7|dis[6]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[0]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[0]~_emulated" and latch "fbcd7seg:D8|dis[0]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[1]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[1]~_emulated" and latch "fbcd7seg:D8|dis[1]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[2]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[2]~_emulated" and latch "fbcd7seg:D8|dis[2]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[3]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[3]~_emulated" and latch "fbcd7seg:D8|dis[3]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[4]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[4]~_emulated" and latch "fbcd7seg:D8|dis[4]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[5]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[5]~_emulated" and latch "fbcd7seg:D8|dis[5]~latch"
+    Warning (13310): Register "fbcd7seg:D8|dis[6]" is converted into an equivalent circuit using register "fbcd7seg:D8|dis[6]~_emulated" and latch "fbcd7seg:D8|dis[6]~latch"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+Info: Implemented 338 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 56 output pins
+    Info: Implemented 278 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 272 megabytes
+    Info: Processing ended: Mon May 27 12:14:56 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
